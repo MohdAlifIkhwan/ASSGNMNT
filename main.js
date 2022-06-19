@@ -221,14 +221,9 @@ app.use(verifyToken);
 	const reg = await Visitor.register(req.body.username, req.body.IdentityCard, req.body.phone, req.body.room_no);
 	
 	console.log(reg);
-
+	//res.status(200).send("Duplicate Username Or Room Has Been Booked")
 	res.json({reg})
 })
-// 	const reg = await User.register(req.body.username, req.body.password, req.body.name, req.body.officerno, req.body.rank, req.body.phone);
-// 	console.log(reg);
-
-// 	res.json({reg})
-// })
 
 app.use(verifyToken);
 /**

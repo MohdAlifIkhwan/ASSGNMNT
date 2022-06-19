@@ -11,7 +11,7 @@ const request = supertest('http://localhost:3002');
 // 			});
 // 	})
 
-	it('login successfully', async () => {
+	it('login Admin successfully', async () => {
 		return request
 			.post('/login')
 			.send({username: 'alif', password: "satu1234" })
@@ -26,6 +26,14 @@ const request = supertest('http://localhost:3002');
 				);
 			});
 	});
-
+	// it('register Visitor successfully', async () => {
+	// 	return request
+	// 		.post('/visitor/register')
+	// 		.send({username: 'test', IdentityCard: '991288234412', Phone: '01233994123', RoomNumber: '50'})
+	// 		.expect('Content-Type', /text/)
+	// 		.expect(200).then(res => {
+	// 			expect(response.text).toBe("Duplicate Username Or Room Has Been Booked");
+	// 		});
+	// 	})
 	
 });
